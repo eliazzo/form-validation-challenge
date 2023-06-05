@@ -9,20 +9,21 @@
   </head>
   <body>
     <form>
-      <label for="name">name</label>
-      <input id="name" />
+      <label for="name"><span aria-hidden="true">*</span>name</label>
+      <input id="name" required/>
 
-      <label for="email">email</label>
-      <input id="email" />
+      <label for="email"><span aria-hidden="true">*</span>email</label>
+      <inputn type="email" id="email" required/>
 
       <label for="website">website</label>
-      <input id="website" />
+      <input type="URL" id="website" />
 
       <label for="subject">subject</label>
-      <input id="subject" />
+      <input id="subject" pattern="^[a-z0-9 ]+$"/>
 
-      <label for="message">message</label>
-      <textarea id="message" rows="5"></textarea>
+      <label for="message"><span aria-hidden="true">*</span>message</label>
+      <p id="helpMessage">Do not exceed 140 characters</p>
+      <textarea aria-describedby="helpMessage" id="message" maxlength="140" rows="5" required></textarea>
 
       <button>Submit</button>
     </form>
